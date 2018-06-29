@@ -1,0 +1,34 @@
+<span class="back">Do you want to logout? <a href="/user/homepage" >logout</a></span>
+<!-- <center> -->
+<div class="container">
+    <h2>This is the dashboard</h2>
+
+    <p>Hello, <%= req.session.name %></p>
+
+    <p>What are your hobbies?</p>
+
+    <form action="/hobbies/add" method="post">
+        <input type="text" name="hobb" />
+        <input type="submit" name="submit" value="ADD" />
+    </form>
+
+
+    <p>These are your hobbies</p>
+
+    <ul>
+        <% _.each(users.hobbies,function(hobbie){ %>
+        <li><%= hobbie.HobbyName %></li>
+        <% }) %>
+    </ul>
+    <!-- <table>
+        <tbody>
+            <% _.each(users.hobbies,function(hobbie){ %>
+            <tr>
+                <td><%= hobbie.HobbyName %></td>
+            </tr>
+            
+            <% }) %>
+        </tbody>
+    </table> -->
+</div>
+<!-- </center> -->

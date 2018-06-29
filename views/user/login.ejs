@@ -1,0 +1,18 @@
+<span class="back">Do you want to go back to the homepage? <a href="/user/homepage" onclick="req.session.loginError=' '">back</a></span>
+<div class="container">
+    <h1>Login  </h1>
+     <form action="/user/processlogin" method="post">
+        <label>Username: </label>
+        <input type="text" name="username"/><br />
+
+        <label>Password: </label>
+        <input type="password" name="password"/><br />
+
+        <p style="color:red"><%= req.session.loginError %></p>
+        
+        <input type="submit" name="submit" value="Login"/><br />
+
+
+        <p>Don't have an account? <a href="/user/register" onclick="req.session.loginError=' '">Create one</a></p>
+    </form>
+</div>
